@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <!--rosparam command="load" file="$(find puzzlebot_operation)/config/operation_params.yaml"/-->
+
+    <!-- Launch position_estimation.py -->
+    <!--node name="light_detector" pkg="puzzlebot_operation" type="color_identification.py"/-->
+
+    <!-- Launch path_generator.py -->
+    <!--node name="signal" pkg="puzzlebot_operation" type="signal.py"/-->
+    
+    <!--node name="color" pkg="puzzlebot_operation" type="color_identification.py"/-->
+
+    <node name="line_detector" pkg="puzzlebot_operation" type="line_identification.py"/>
+
+    <node name="line_following" pkg="puzzlebot_operation" type="line_following.py"/>
+    
+</launch>
